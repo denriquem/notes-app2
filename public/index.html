@@ -8,6 +8,15 @@
 </head>
 <body>
   <div id="app">hello!</div>
+  <script src="js/note-list-model.js"></script>
+  <script src="js/note-model.js"></script>
+  <script src="js/note-list-view.js"></script>
   <script src="js/note-controller.js"></script>
+  <script>
+    const noteList = new NoteList();
+    noteList.add('Hello Danny');
+    const noteController = new NoteController(noteList);
+    noteController.displayHtml();
+  </script>
 </body>
 </html>
