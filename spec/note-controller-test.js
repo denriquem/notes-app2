@@ -5,7 +5,7 @@
     var element = { innerHTML: "unchanged" };
 
     noteController.displayHtml(element);
-    assert.eq(element.innerHTML, "<ul><li><div>Favourite drink: seltzer</div></li></ul>");
+    assert.eq(element.innerHTML, "<ul><li><div>Favourite drink: sel</div></li></ul>");
   }
 
   testNoteController();
