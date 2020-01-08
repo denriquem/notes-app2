@@ -8,6 +8,13 @@
     var html = noteListView.htmlString();
     element.innerHTML = html;
   }
+  NoteController.prototype.setUpHashChangeListener = function (notWindow, element) {
+    var controller = this;
+    notWindow.addEventListener("hashchange", function(){
+      var singleNoteView = new SingleNoteView(controller.noteListModel.showNotes()[0]);
+      element.innerHTML = singleNoteView.displayHTML();
+    })
+  }
 
   exports.NoteController = NoteController
 })(this)

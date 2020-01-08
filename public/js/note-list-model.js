@@ -5,9 +5,8 @@
 
   NoteList.prototype = {
     showNotes: function() {
-      return this.noteModels.map(note => note.read())
+      return this.noteModels;
     },
-
     add: function(...notes) {
       notes.forEach(note => {
         this.noteModels.push(new Note(note))
